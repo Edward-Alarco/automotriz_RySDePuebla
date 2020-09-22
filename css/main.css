@@ -215,6 +215,16 @@ header .menu-barra-movil .menu-despegable .menu-principal a:hover {
 .nosotros .col-izq1 {
   width: 50%;
 }
+.nosotros .col-izq1 img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 .nosotros .col-der2 {
   width: 50%;
 }
@@ -463,6 +473,9 @@ header .menu-barra-movil .menu-despegable .menu-principal a:hover {
   letter-spacing: 0.35px;
   font-family: 'Raleway', sans-serif;
 }
+.clientes .container #botonMostrar {
+  display: none;
+}
 .clientes .container .img-container {
   width: 100%;
   display: flex;
@@ -472,6 +485,22 @@ header .menu-barra-movil .menu-despegable .menu-principal a:hover {
   align-items: center;
 }
 .clientes .container .img-container img {
+  width: 33.333333%;
+  height: 33.333333%;
+  transform: scale(0.65);
+}
+.clientes .container .img-container-mo {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.clientes .container .img-container-mo #botonOcultar {
+  display: none;
+}
+.clientes .container .img-container-mo img {
   width: 33.333333%;
   height: 33.333333%;
   transform: scale(0.65);
@@ -722,6 +751,9 @@ footer .creditos p {
   .clientes .container .img-container img {
     transform: scale(0.5);
   }
+  .clientes .container .img-container-mo img {
+    transform: scale(0.5);
+  }
   .contacto .container .columna2 h2 {
     font-size: 1.6rem;
     margin-bottom: 0.6rem;
@@ -792,17 +824,32 @@ footer .creditos p {
   .clientes .container .img-container img {
     transform: scale(0.575);
   }
+  .clientes .container .img-container-mo img {
+    transform: scale(0.575);
+  }
   .clientes .container h3 {
     font-size: 2rem;
   }
   .clientes .container p {
     font-size: 0.75rem;
   }
+  .nosotros .col-izq1 img {
+    padding: 1.8rem;
+  }
 }
 @media all and (max-width: 850px) {
-  .nosotros .col-der2,
-  .nosotros .col-der1 {
+  header .menu-barra-pc {
+    padding: 0 1rem;
+  }
+  header .menu-barra-pc .menu-principal a {
+    margin: 0 0.25rem;
+    font-size: 0.8rem;
+  }
+  .nosotros .col-der2 {
     width: 100%;
+  }
+  .nosotros .col-izq1 {
+    display: none;
   }
   .contacto .container {
     width: 90%;
@@ -835,6 +882,13 @@ footer .creditos p {
   }
 }
 @media all and (max-width: 700px) {
+  header .menu-barra-pc {
+    padding: 0 0.5rem;
+  }
+  header .menu-barra-pc .menu-principal a {
+    margin: 0 0.15rem;
+    font-size: 0.65rem;
+  }
   .contacto .container .columna1,
   .contacto .container .columna2 {
     width: 100%;
@@ -885,6 +939,38 @@ footer .creditos p {
   }
 }
 @media all and (max-width: 640px) {
+  .clientes .container .img-container-mo {
+    display: none;
+  }
+  .clientes .container .img-container-mo.activar {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .clientes .container .img-container-mo #botonOcultar {
+    display: block;
+    padding: 12px 25px;
+    background: #3498db;
+    border: 1px solid #3498db;
+    margin: 0 auto;
+    color: #fff;
+    width: 80%;
+  }
+  .clientes .container .img-container {
+    margin-bottom: 2rem;
+  }
+  .clientes .container #botonMostrar {
+    display: block;
+    width: 80%;
+    padding: 12px 25px;
+    background: #3498db;
+    border: 1px solid #3498db;
+    margin: 0 auto;
+    color: #fff;
+  }
   header .menu-barra-pc {
     display: none;
   }
@@ -922,6 +1008,10 @@ footer .creditos p {
     width: 50%;
     height: 50%;
   }
+  .clientes .container .img-container-mo img {
+    width: 50%;
+    height: 50%;
+  }
   .clientes {
     padding: 1.5rem 0;
   }
@@ -937,6 +1027,9 @@ footer .creditos p {
   }
 }
 @media all and (max-width: 500px) {
+  .no-movil {
+    display: none;
+  }
   .services .cards-services .card {
     width: 100%;
   }
@@ -984,5 +1077,77 @@ footer .creditos p {
   .clientes .container .img-container img {
     width: 100%;
     height: 100%;
+  }
+  .clientes .container .img-container-mo img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.banner-innova {
+  width: 100%;
+  height: 70vh;
+  top: 0;
+  left: 0;
+}
+.banner-innova .banner {
+  background: url(../img/fondo-innova.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.botones-innova {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 100%;
+  background: #f5f6fa;
+}
+.botones-innova a {
+  width: 200px;
+  text-align: center;
+  font-weight: 200;
+  border-radius: 10px;
+  padding: 12px 25px;
+  background-color: #e67e22;
+  border: 1.5px solid #e67e22;
+  color: #fff;
+  text-decoration: none;
+  transform: scale(1);
+  transition: all 0.4s ease-in-out;
+}
+.botones-innova a:hover {
+  transform: scale(0.95);
+}
+.atras {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.atras a {
+  text-decoration: none;
+}
+.atras a .fa-arrow-circle-left {
+  position: fixed;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  color: #e67e22;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+/*Media Queries - Innovacion*/
+@media all and (max-width: 730px) {
+  .botones-innova a {
+    width: 170px;
   }
 }
