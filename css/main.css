@@ -215,6 +215,9 @@ header .menu-barra-movil .menu-despegable .menu-principal a:hover {
 .nosotros .col-izq1 {
   width: 50%;
 }
+.nosotros .col-izq1 h2 {
+  color: #3498db;
+}
 .nosotros .col-izq1 img {
   display: block;
   margin: 0 auto;
@@ -224,6 +227,10 @@ header .menu-barra-movil .menu-despegable .menu-principal a:hover {
   padding-right: 5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.nosotros .col-izq1 p {
+  color: #696969;
+  font-size: 0.8rem;
 }
 .nosotros .col-der2 {
   width: 50%;
@@ -849,7 +856,20 @@ footer .creditos p {
     width: 100%;
   }
   .nosotros .col-izq1 {
-    display: none;
+    width: 100%;
+  }
+  .nosotros .col-izq1 h2 {
+    text-align: center;
+  }
+  .nosotros .col-izq1 img {
+    padding-top: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+  }
+  .nosotros .col-izq1 p {
+    text-align: center;
+    margin-bottom: 2rem;
   }
   .contacto .container {
     width: 90%;
@@ -1030,6 +1050,12 @@ footer .creditos p {
   .no-movil {
     display: none;
   }
+  .nosotros .col-izq1 p {
+    font-size: 0.7rem;
+  }
+  .nosotros .col-izq1 img {
+    padding: 2rem;
+  }
   .services .cards-services .card {
     width: 100%;
   }
@@ -1084,36 +1110,44 @@ footer .creditos p {
   }
 }
 .banner-innova {
+  background: rgba(116, 185, 255, 0.8);
   width: 100%;
   height: 70vh;
   top: 0;
   left: 0;
 }
 .banner-innova .banner {
-  background: url(../img/fondo-innova.png);
+  background: url(../img/fondo-innova.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
 }
+.banner-innova .banner img {
+  display: block;
+  margin: 0 auto;
+  width: 56.7%;
+}
 .botones-innova {
+  background: #dfe6e9;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 30vh;
   width: 100%;
-  background: #f5f6fa;
 }
 .botones-innova a {
+  margin: 1rem;
   width: 200px;
   text-align: center;
   font-weight: 200;
   border-radius: 10px;
   padding: 12px 25px;
-  background-color: #e67e22;
-  border: 1.5px solid #e67e22;
+  background-color: #74b9ff;
+  border: 1px solid rgba(0, 0, 0, 0.25);
   color: #fff;
+  text-transform: uppercase;
   text-decoration: none;
   transform: scale(1);
   transition: all 0.4s ease-in-out;
@@ -1138,7 +1172,7 @@ footer .creditos p {
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
-  color: #e67e22;
+  color: #74b9ff;
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -1146,8 +1180,52 @@ footer .creditos p {
   font-size: 3rem;
 }
 /*Media Queries - Innovacion*/
-@media all and (max-width: 730px) {
+@media all and (max-width: 1100px) {
+  .banner-innova .banner {
+    background: url(../img/fondo-innova-tablet.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+@media all and (max-width: 878px) {
+  .banner-innova .banner {
+    background: url(../img/fondo-innnova-tablet2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   .botones-innova a {
     width: 170px;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border: none;
+    letter-spacing: 0;
+  }
+}
+@media all and (max-width: 662px) {
+  .banner-innova .banner {
+    background: url(../img/fondo-innova-celular.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .botones-innova a {
+    margin: 0.5rem;
+  }
+}
+@media all and (max-width: 500px) {
+  .banner-innova .banner {
+    background: url(../img/fondo-innova-celular-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .botones-innova {
+    flex-direction: column-reverse;
+  }
+  .botones-innova a {
+    margin: 0.25rem;
   }
 }
