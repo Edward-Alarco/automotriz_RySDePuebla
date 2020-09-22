@@ -615,6 +615,18 @@ header .menu-barra-movil .menu-despegable .menu-principal a:hover {
   max-width: 100%;
   min-height: 5rem;
   max-height: 7rem;
+  min-width: 100%;
+  margin-bottom: 2rem;
+}
+.contacto .container .columna2 form input[type="submit"] {
+  padding: 12px 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  background: #3498db;
+  color: #fff;
 }
 footer {
   background-color: #29293a;
