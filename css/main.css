@@ -337,7 +337,7 @@ header .menu-barra-movil .menu-despegable .menu-principal a:hover {
   letter-spacing: 0.2px;
 }
 .entre {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../img/fondo-entre.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6));
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 0;
